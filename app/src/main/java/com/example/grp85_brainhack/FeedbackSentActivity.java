@@ -15,13 +15,16 @@ public class FeedbackSentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback_sent);
+
         backbutton = findViewById(R.id.backButton);
 
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(FeedbackSentActivity.this, MainActivity.class));
+
             }
         });
+
     }
 }

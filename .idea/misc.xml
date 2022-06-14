@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1455" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar.xml" value="0.5" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar_feedback_form.xml" value="0.2558876811594203" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar_homepage.xml" value="0.25" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar_login.xml" value="0.2833333333333333" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar_noback.xml" value="0.18854166666666666" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/actionbar_profile.xml" value="0.365625" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_feedback_form.xml" value="0.19117647058823528" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_feedback_sent.xml" value="0.17831813576494426" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_login.xml" value="0.17831813576494426" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_profile.xml" value="0.17755825734549138" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_register.xml" value="0.17831813576494426" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/activity_start.xml" value="0.33" />
+        <entry key="..\:/Brainhack_suppository/app/src/main/res/layout/list_item.xml" value="0.17831813576494426" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_feedback_form.xml" value="0.5" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_feedback_sent.xml" value="0.5744791666666667" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_login.xml" value="0.5744791666666667" />

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -34,8 +35,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         createfeedbackform = findViewById(R.id.createfeedbackform);
-
+        ImageView profileIcon = findViewById(R.id.profileIcon);
         listview = findViewById(R.id.listview);
+
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this , ProfileActivity.class));
+            }
+        });
 
         createfeedbackform.setOnClickListener(new View.OnClickListener() {
             @Override

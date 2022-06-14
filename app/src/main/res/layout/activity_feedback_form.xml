@@ -5,25 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FeedbackFormActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Feedback Form"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/feedbackformtext"
-        android:layout_marginTop="10dp"/>
+    <include layout="@layout/actionbar_feedback_form"/>
 
 
     <EditText
         android:id="@+id/feedbackformname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/feedbackformtext"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="90dp"
         android:hint="Name"
         android:textSize="20dp" />
 
@@ -78,7 +68,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/slidertext"
-        android:layout_marginHorizontal="10dp" />
+        android:layout_marginHorizontal="10dp"
+        android:valueFrom="1"
+        android:valueTo="3"
+        android:stepSize="1"
+        />
 
 
     <Button
