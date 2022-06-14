@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
@@ -18,6 +19,7 @@ public class FeedbackFormActivity extends AppCompatActivity {
 
     private EditText title, location, description, name;
     private Button submitfeedbackform;
+    private com.google.android.material.slider.Slider prioritySlider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,19 @@ public class FeedbackFormActivity extends AppCompatActivity {
         description = findViewById(R.id.feedbackformdesc);
         name = findViewById(R.id.feedbackformname);
         submitfeedbackform = findViewById(R.id.feedbackformsubmit);
+        prioritySlider = findViewById(R.id.slider);
+        ImageView backArrow=findViewById(R.id.backArrow_icon);
+
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FeedbackFormActivity.this, MainActivity.class));
+            }
+        });
+
+
+
 
 
         submitfeedbackform.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +52,7 @@ public class FeedbackFormActivity extends AppCompatActivity {
                 String txt_title = title.getText().toString();
                 String txt_location = location.getText().toString();
                 String txt_description = description.getText().toString();
-                float urgency = ;
+                float urgency = prioritySlider.getValue();
 
                 if(txt_title.isEmpty()||txt_location.isEmpty()||txt_description.isEmpty()||txt_name.isEmpty()){
                     Toast.makeText(FeedbackFormActivity.this, "Please fill up all fields.", Toast.LENGTH_SHORT).show();

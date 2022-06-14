@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -34,8 +35,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         createfeedbackform = findViewById(R.id.createfeedbackform);
-
+        ImageView profileIcon = findViewById(R.id.profileIcon);
         listview = findViewById(R.id.listview);
+
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this , ProfileActivity.class));
+            }
+        });
 
         createfeedbackform.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 list.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Data data = snapshot.getValue(Data.class);
-                    String txt = "Title: " + data.getTitle() +" \nLocation: "+ data.getLocation()+" \nDescription: "+ data.getDescription()+"\nSent in by: "+data.getName()+" At: "+data.getTime()+"\nStatus: "+data.getSolved_status();
+                    String txt = "Title: " + data.getTitle() +" Urgency: "+data  .getUrgency() +" \nLocation: "+ data.getLocation()+" \nDescription: "+ data.getDescription()+"\nSent in by: "+data.getName()+" At: "+data.getTime()+"\nStatus: "+data.getSolved_status();
                     list.add(txt);
                 }
                 adapter.notifyDataSetChanged();
