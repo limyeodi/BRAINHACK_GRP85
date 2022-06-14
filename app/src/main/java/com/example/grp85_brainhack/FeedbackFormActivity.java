@@ -63,7 +63,7 @@ public class FeedbackFormActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("title").setValue(txt_title);
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("location").setValue(txt_location);
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("description").setValue(txt_description);
-                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("solved_status").setValue("false");
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("solved_status").setValue("Unresolved");
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("urgency").setValue(urgency);
 
                     Toast.makeText(FeedbackFormActivity.this, "Feedback form sent!", Toast.LENGTH_SHORT).show();

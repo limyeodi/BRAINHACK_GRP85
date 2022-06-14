@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 list.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Data data = snapshot.getValue(Data.class);
+
                     String txt = "Title: " + data.getTitle() +" Urgency: "+data  .getUrgency() +" \nLocation: "+ data.getLocation()+" \nDescription: "+ data.getDescription()+"\nSent in by: "+data.getName()+" At: "+data.getTime()+"\nStatus: "+data.getSolved_status();
                     list.add(txt);
                 }
