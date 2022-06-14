@@ -11,7 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class StartActivity extends AppCompatActivity {
 
-    private Button register, login;
+    private Button register, login, loginasadmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class StartActivity extends AppCompatActivity {
 
         register = findViewById(R.id.register);
         login = findViewById(R.id.login);
+        loginasadmin = findViewById(R.id.loginasadmin);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +35,13 @@ public class StartActivity extends AppCompatActivity {
                 finish();
             }
         });
-        FirebaseDatabase.getInstance().getReference().child("TestChild").child("Testchild2").setValue("Is firebase working?");
+        loginasadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StartActivity.this, AdminPanelActivity.class));
+                finish();
+            }
+        });
+
     }
 }

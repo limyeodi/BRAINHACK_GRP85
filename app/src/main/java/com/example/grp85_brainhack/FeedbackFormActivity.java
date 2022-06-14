@@ -37,6 +37,7 @@ public class FeedbackFormActivity extends AppCompatActivity {
                 String txt_title = title.getText().toString();
                 String txt_location = location.getText().toString();
                 String txt_description = description.getText().toString();
+                float urgency = ;
 
                 if(txt_title.isEmpty()||txt_location.isEmpty()||txt_description.isEmpty()||txt_name.isEmpty()){
                     Toast.makeText(FeedbackFormActivity.this, "Please fill up all fields.", Toast.LENGTH_SHORT).show();
@@ -48,6 +49,7 @@ public class FeedbackFormActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("location").setValue(txt_location);
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("description").setValue(txt_description);
                     FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("solved_status").setValue("false");
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("urgency").setValue(urgency);
 
                     Toast.makeText(FeedbackFormActivity.this, "Feedback form sent!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(FeedbackFormActivity.this, FeedbackSentActivity.class));

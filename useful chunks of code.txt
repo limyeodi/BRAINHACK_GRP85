@@ -9,3 +9,38 @@ logout.setOnClickListener(new View.OnClickListener() {
             }
         });
 
+
+//firebabse simple write
+FirebaseDatabase.getInstance().getReference().child("TestChild").child("Testchild2").setValue("Is firebase working?");
+
+
+
+//listview shit :O
+
+private ListView listview;
+
+listview = findViewById(R.id.listview);
+
+        ArrayList<String> list = new ArrayList<>();
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
+
+        listview.setAdapter(adapter);
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Languages");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                list.clear();
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    list.add(snapshot.getValue().toString());
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+ +" : "+ data.getLocation()+" : "+ data.getDescription()+" : Sent in by:"+data.getName()
