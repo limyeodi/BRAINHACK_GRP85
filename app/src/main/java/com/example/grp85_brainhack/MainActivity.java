@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         createfeedbackform.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
+
                 Toast.makeText(MainActivity.this, "Moving to feedback form", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this , FeedbackFormActivity.class));
             }
@@ -52,13 +52,15 @@ public class MainActivity extends AppCompatActivity {
 
         listview.setAdapter(adapter);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Languages");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("data");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    list.add(snapshot.getValue().toString());
+                    Data data = snapshot.getValue(Data.class);
+                    String txt = "Title: " + data.getTitle() +" \nLocation: "+ data.getLocation()+" \nDescription: "+ data.getDescription()+"\nSent in by: "+data.getName()+"At: "+data.getTime()+"\nStatus: "+data.getSolved_status();
+                    list.add(txt);
                 }
                 adapter.notifyDataSetChanged();
             }

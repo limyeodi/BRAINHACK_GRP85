@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_feedback_form.xml" value="0.67" />
+        <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_feedback_form.xml" value="0.5" />
+        <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_feedback_sent.xml" value="0.5744791666666667" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_login.xml" value="0.5744791666666667" />
-        <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_main.xml" value="0.48703703703703705" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_register.xml" value="0.5744791666666667" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/activity_start.xml" value="0.5744791666666667" />
         <entry key="..\:/Local_Git_Repository/Grp85_Brainhack/app/src/main/res/layout/list_item.xml" value="0.30462962962962964" />

@@ -2,6 +2,7 @@ package com.example.grp85_brainhack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,11 +42,16 @@ public class FeedbackFormActivity extends AppCompatActivity {
                     Toast.makeText(FeedbackFormActivity.this, "Please fill up all fields.", Toast.LENGTH_SHORT).show();
                 }else{
                     Date currentTime = Calendar.getInstance().getTime();
-                    FirebaseDatabase.getInstance().getReference().child(currentTime.toString()).child("Name").setValue(txt_name);
-                    FirebaseDatabase.getInstance().getReference().child(currentTime.toString()).child("Title").setValue(txt_title);
-                    FirebaseDatabase.getInstance().getReference().child(currentTime.toString()).child("Location").setValue(txt_location);
-                    FirebaseDatabase.getInstance().getReference().child(currentTime.toString()).child("Description").setValue(txt_description);
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("name").setValue(txt_name);
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("time").setValue(currentTime.toString());
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("title").setValue(txt_title);
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("location").setValue(txt_location);
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("description").setValue(txt_description);
+                    FirebaseDatabase.getInstance().getReference().child("data").child(currentTime.toString()).child("solved_status").setValue("false");
+
                     Toast.makeText(FeedbackFormActivity.this, "Feedback form sent!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(FeedbackFormActivity.this, FeedbackSentActivity.class));
+                    finish();
                 }
             }
         });
